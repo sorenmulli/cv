@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fh_soren_cv"
+version = "0.0.1"
+description = "Supplying the advisor with live feedback and help during advisory calls"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Søren Vejlgaard Holm", email = "soren@vholm.dk" }
+]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "python-fasthtml",
+]
+
+[project.urls]
+homepage = "https://soren.vholm.dk"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "F",
+    "E",
+    "W",
+    "C90",
+    "N802",
+    "N801",
+    "N803",
+    "N804",
+    "N805",
+    "N807",
+    "N999",
+    "PLC",
+    "PLE",
+    "PLR0202",
+    "PLR0203",
+    "PLR0206",
+    "PLR0912",
+    "PLR0913",
+    "PLR0914",
+    "PLR1711",
+]
+
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
